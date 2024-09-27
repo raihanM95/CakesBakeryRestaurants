@@ -1,7 +1,7 @@
 /* Authored by Boaz James Otieno */
 /* full screen image slider */
 
-var arr=['images/1.jpg"','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg']; //an array of image sources
+var arr=['images/1.jpg"','images/2.jpg']; //an array of image sources
 var pos=0; //initializes image position in the array
 $(document).ready(function () {
     var interval=5000; //interval for slide
