@@ -122,22 +122,22 @@
 				</div>
 				<div class="col-lg-6 address-left mt-lg-0 mt-5">
 					<div class="address-grid">
-						<h4 class="font-weight-bold mb-3">Get In Touch</h4>
-						<form action="#" method="post">
+						<h4 class="font-weight-bold mb-3">Order a Cake</h4>
+						<form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Name" name="name" required="">
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<input type="email" class="form-control" placeholder="Email" name="email" required="">
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Subject" name="subject"
 									required="">
-							</div>
+							</div> -->
 							<div class="form-group">
-								<textarea placeholder="Message" class="form-control" required=""></textarea>
+								<textarea placeholder="Order Details" class="form-control" name="details" required=""></textarea>
 							</div>
-							<input type="submit" value="SEND">
+							<input type="submit" value="Order Now">
 						</form>
 					</div>
 				</div>
@@ -215,6 +215,8 @@
 
 	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
+
+	<script  src="js/whatsapp.js"></script>
 
 	<!-- //Js files -->
 

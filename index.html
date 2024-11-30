@@ -28,6 +28,8 @@
 	<!-- Font-Awesome-Icons-CSS -->
 	<link rel="stylesheet" href="css/fontawesome-all.css">
 
+	<link rel="stylesheet" href="css/whatsapp.css">
+
 	<!-- Web-Fonts -->
 	<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link
@@ -75,6 +77,10 @@
 			</nav>
 		</header>
 		<!-- //header -->
+
+		<a href="https://api.whatsapp.com/send?phone=+8801749298029&text=Hello." class="float" target="_blank">
+			<i class="fab fa-whatsapp my-float"></i>
+			</a>
 
 		<!-- banner -->
 		<!-- main image slider container -->
@@ -380,28 +386,30 @@
 					<div class="agile_its_registration bg-white">
 						<h3 class="title-2 mb-3">Order a Cake</h3>
 						<!-- <p class="mb-4"></p> -->
-						<form action="#" method="post">
+						<form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
 							<div class="agileits-location form-group">
-								<label>Shape</label>
-								<select required>
+								<!-- <label>Name</label> -->
+								<input type="text" class="form-control" placeholder="Name" name="name" required="">
+								<!-- <select required>
 									<option value="">Round</option>
 									<option value="1">Rectangle</option>
 									<option value="2">Square</option>
 									<option value="2">Custom</option>
 								</select>
-								<div class="clear"></div>
+								<div class="clear"></div> -->
 							</div>
-							<!-- <div class="agileits-location w3ls-1 form-group">
-								<label>Levels</label>
-								<select required>
+							<div class="agileits-location w3ls-1 form-group">
+								<!-- <label>Order Details</label> -->
+								<textarea placeholder="Order Details" class="form-control" name="details" required=""></textarea>
+								<!-- <select required>
 									<option value="">1</option>
 									<option value="1">2</option>
 									<option value="2">3</option>
 									<option value="2">4</option>
 								</select>
-								<div class="clear"></div>
-							</div> -->
-							<div class="agileits-location form-group">
+								<div class="clear"></div> -->
+							</div>
+							<!-- <div class="agileits-location form-group">
 								<label>Size</label>
 								<select required>
 									<option value="">4 inch</option>
@@ -410,8 +418,8 @@
 									<option value="">10 inch</option>
 								</select>
 								<div class="clear"></div>
-							</div>
-							<div class="agileits-location w3ls-1 form-group">
+							</div> -->
+							<!-- <div class="agileits-location w3ls-1 form-group">
 								<label>Flavor</label>
 								<select required>
 									<option value="">Chocolate</option>
@@ -420,8 +428,8 @@
 									<option value="">Vanilla</option>
 								</select>
 								<div class="clear"></div>
-							</div>
-							<input type="submit" value="Order" class="agileinfo-order btn" />
+							</div> -->
+							<input type="submit" value="Order Now" class="agileinfo-order btn" />
 						</form>
 					</div>
 				</div>
@@ -460,79 +468,54 @@
 						<h3 class="title-2 mb-md-5 mb-4">Frequently asked questions</h3>
 						<ul class="faq list-unstyled">
 							<li class="item1">
-								<a href="#" title="click here" class="text-dark border-bottom pb-3">What types of cakes
-									do you offer?
+								<a href="#" title="click here" class="text-dark border-bottom pb-3">
+									Can I customize my cake?
 									<i class="fas fa-plus float-right"></i>
 								</a>
 								<ul class="list-unstyled">
 									<li class="subitem1">
-										<p class="pt-3 pb-4"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-											sed diam nonummy nibh euismod
-											tincidunt ut laoreet dolore.
-											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-											praesentium voluptatum deleniti
-											atque
-											corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-											non provident.</p>
+										<p class="pt-3 pb-4"> 
+											Yes, we offer customization options for cakes, including flavors, designs, sizes, and personalized messages. You can share your preferences or upload a reference image, and we’ll do our best to bring your vision to life.
+										</p>
 									</li>
 								</ul>
 							</li>
 							<li class="item2 my-3">
-								<a href="#" title="click here" class="text-dark border-bottom pb-3">The standard Lorem
-									Ipsum passage Etiam?
+								<a href="#" title="click here" class="text-dark border-bottom pb-3">
+									How much notice is required for placing an order?
 									<i class="fas fa-plus float-right"></i>
 								</a>
 								<ul class="list-unstyled">
 									<li class="subitem1">
-										<p class="pt-3 pb-4"> Tincidunt ut laoreet dolore At vero eos et Lorem ipsum
-											dolor sit amet, consectetuer
-											adipiscing elit, sed diam nonummy
-											nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod
-											accusamus et iusto odio dignissimos
-											ducimus
-											qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-											et quas molestias excepturi sint
-											occaecati
-											cupiditate non provident.</p>
+										<p class="pt-3 pb-4">
+											For regular cakes, we recommend placing your order at least 24 hours in advance. For customized or large orders, a notice of 2–3 days is ideal to ensure we have enough time to prepare your cake to perfection.
+										</p>
 									</li>
 								</ul>
 							</li>
 							<li class="item3 my-3">
-								<a href="#" title="click here" class="text-dark border-bottom pb-3">Ut semper nisl ut
-									laoreet ultrices?
+								<a href="#" title="click here" class="text-dark border-bottom pb-3">
+									Do you offer delivery services?
 									<i class="fas fa-plus float-right"></i>
 								</a>
 								<ul class="list-unstyled">
 									<li class="subitem1">
-										<p class="pt-3 pb-4">Dincidunt ut laoreet dolore At vero eos et Lorem ipsum
-											dolor sit amet, consectetuer
-											adipiscing elit, sed diam nonummy
-											nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod
-											accusamus et iusto odio dignissimos
-											ducimus
-											qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-											et quas molestias excepturi sint
-											occaecati
-											cupiditate non provident.</p>
+										<p class="pt-3 pb-4">
+											Yes, we provide delivery services within specific areas. Delivery charges and availability depend on the location. Alternatively, you can opt for self-pickup from our store.
+										</p>
 									</li>
 								</ul>
 							</li>
 							<li class="item4">
-								<a href="#" title="click here" class="text-dark border-bottom pb-3">Sed diam nonummy
-									nibh eiusmod faucibus?
+								<a href="#" title="click here" class="text-dark border-bottom pb-3">
+									What are the payment options available?
 									<i class="fas fa-plus float-right"></i>
 								</a>
 								<ul class="list-unstyled">
 									<li class="subitem1">
-										<p class="pt-3">At vero eos et Lorem ipsum dolor sit amet, consectetuer
-											adipiscing elit, sed diam nonummy
-											nibh euismod consectetuer
-											adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio
-											dignissimos ducimus qui blanditiis
-											praesentium
-											voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
-											sint occaecati cupiditate non
-											provident.</p>
+										<p class="pt-3">
+											We accept payments via cash, credit/debit cards, mobile wallets, and online transfers. For customized orders, a deposit or full payment may be required at the time of booking.
+										</p>
 									</li>
 								</ul>
 							</li>
@@ -713,6 +696,8 @@
 
 	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
+
+	<script  src="js/whatsapp.js"></script>
 
 	<!-- //Js files -->
 
